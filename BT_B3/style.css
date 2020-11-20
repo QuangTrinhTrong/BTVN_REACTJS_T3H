@@ -1,0 +1,35 @@
+.container .bg-light {
+    background: red !important;
+}
+
+.container .row #col1 {
+    background: red !important;
+    color: white !important;
+}
+
+.container .row #col2 {
+    background: blue !important;
+    color: white !important;
+}
+
+.container .row #col3 {
+    background: green !important;
+    color: white !important;
+}
+
+.main .row .col-9 .item-news .img{
+    margin-top: 7px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.main .row .col-9 .item-news h3,p{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: black;
+    color: white;
+}
