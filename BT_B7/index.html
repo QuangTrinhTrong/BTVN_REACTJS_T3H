@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+</head>
+
+<body>
+    <!--Bài 1: Tính tổng các phần tử trong mảng -->
+    <p>Tổng các phần tử trong mảng : </p>
+    <p id="sum"></p>
+
+    <script>
+        let sum = 0;
+        let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        arr1.forEach(myFunction = (item) => {
+            sum += item;
+            document.getElementById("sum").innerHTML = sum;
+        });
+    </script>
+
+    <!--Bài 2: DOM -->
+    <h1 id="inner_html">Hello</h1>
+    <button onclick="showDom()">Send</button>
+    <script>
+        showDom = () => {
+            //Thay text Hello thành Hello2
+            document.getElementById('inner_html').innerHTML = 'Hello2';
+            //Thay màu chữ thành màu đỏ
+            document.getElementById('inner_html').style.color = 'red';
+            //Thay tag h1 thành tag h2 
+            document.getElementById('inner_html').outerHTML = '<h2 id="inner_html">Hello2</h2>';
+        }
+    </script>
+
+</body>
+
+</html>
