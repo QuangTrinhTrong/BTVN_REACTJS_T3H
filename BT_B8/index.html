@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT_B8</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <style>
+        .table,
+        thead,
+        tbody,
+        tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+            </tr>
+        </thead>
+        <tbody onclick="showModal" data-toggle="modal" data-target="#exampleModal">
+            <tr>
+                <td>30 </td>
+                <td>1 </td>
+                <td>2 </td>
+                <td>3 </td>
+                <td>4 </td>
+            </tr>
+            <tr>
+                <td>7 </td>
+                <td>8 </td>
+                <td>9 </td>
+                <td>10 </td>
+                <td>11 </td>
+            </tr>
+            <tr>
+                <td>14 </td>
+                <td>15 </td>
+                <td>16 </td>
+                <td>17 </td>
+                <td>18 </td>
+            </tr>
+            <tr>
+                <td>21 </td>
+                <td>22 </td>
+                <td>23 </td>
+                <td>24 </td>
+                <td>25 </td>
+            </tr>
+            <tr>
+                <td>28 </td>
+                <td>29 </td>
+                <td>30 </td>
+                <td>31 </td>
+                <td>1 </td>
+            </tr>
+            <tr>
+                <td>4 </td>
+                <td>5 </td>
+                <td>6 </td>
+                <td>7 </td>
+                <td>8 </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Start Date</p>
+                    <input type="date" id="start_date">
+                    <br><br>
+                    <p>End Date</p>
+                    <input type="date" id="end_date">
+                    <br><br>
+                    <p>Note</p>
+                    <input type="text" id="note">
+                </div>
+                <div class="modal-footer">
+                    <button onclick="format()" class="btn btn-primary">Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showModal() {
+            $("#exampleModal").click(function () {
+                $("p").show();
+            });
+        }
+        function format() {
+            let start_date = document.getElementById("start_date").value;
+            alert("Start Date : " + moment(start_date).format("DD/MM/YYYY"));
+
+            let end_date = document.getElementById("end_date").value;
+            alert("End Date : " + moment(end_date).add(5, "days").format("DD/MM/YYYY"));
+
+            let note = document.getElementById("note").value;
+            alert("Note : " + note);
+        }
+    </script>
+</body>
+
+</html>
